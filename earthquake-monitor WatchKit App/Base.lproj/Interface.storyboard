@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="earthquake_monitor_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="56" alignment="left" numberOfLines="2" id="6A8-20-AVx">
+                            <string key="text">Earthquake 
+Monitor</string>
+                        </label>
+                        <table alignment="left" id="Gzm-Ev-ePf">
+                            <items>
+                                <tableRow identifier="RowController" id="3zw-G2-yKd" customClass="RowController" customModule="earthquake_monitor_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="64" alignment="left" id="aTt-zf-P59">
+                                        <items>
+                                            <group width="0.40000000000000002" height="1" alignment="left" verticalAlignment="center" layout="vertical" id="fIp-gi-eHU">
+                                                <items>
+                                                    <label width="1" height="0.20000000000000001" alignment="left" verticalAlignment="center" alpha="0.80000000000000004" text="magnitude" textAlignment="center" id="aU9-b3-qtf">
+                                                        <fontDescription key="font" type="system" pointSize="9"/>
+                                                    </label>
+                                                    <label width="1" height="0.59999999999999998" heightAdjustment="2" alignment="left" text="8.4" textAlignment="center" minimumScaleFactor="0.69999999999999996" id="pa5-d9-ocV">
+                                                        <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="0.59999999999999998" height="1" alignment="right" verticalAlignment="center" layout="vertical" id="vPu-rh-6uR">
+                                                <items>
+                                                    <dateLabel width="1" height="0.20000000000000001" alignment="left" verticalAlignment="center" textAlignment="right" id="sQ6-8V-cXo">
+                                                        <fontDescription key="font" type="system" weight="medium" pointSize="9"/>
+                                                        <dateFormatterStyle key="dateStyle" short="YES"/>
+                                                        <dateFormatterStyle key="timeStyle" short="YES"/>
+                                                    </dateLabel>
+                                                    <label width="1" height="0.59999999999999998" heightAdjustment="2" alignment="left" text="18km ESE of Playa Vicente, Mexico" textAlignment="right" numberOfLines="2" id="SOH-tA-CRi">
+                                                        <fontDescription key="font" type="system" pointSize="10"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="8" right="12" top="4" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="datetimeLabel" destination="sQ6-8V-cXo" id="PvD-hj-56l"/>
+                                        <outlet property="locationLabel" destination="SOH-tA-CRi" id="NLr-xI-89f"/>
+                                        <outlet property="magnitudeLabel" destination="pa5-d9-ocV" id="DUL-Cc-O6C"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="uitable" destination="Gzm-Ev-ePf" id="syq-3S-v2Z"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,14 +82,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="earthquake_monitor_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="earthquake_monitor_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

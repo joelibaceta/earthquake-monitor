@@ -15,6 +15,8 @@
 		A969212023CC1BCD005ED41B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A969211F23CC1BCD005ED41B /* ExtensionDelegate.swift */; };
 		A969212223CC1BCD005ED41B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A969212123CC1BCD005ED41B /* NotificationController.swift */; };
 		A969212423CC1BCE005ED41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A969212323CC1BCE005ED41B /* Assets.xcassets */; };
+		A9E08ED323D6CD4200E11C8C /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E08ED223D6CD4200E11C8C /* RowController.swift */; };
+		A9E08ED523D8164500E11C8C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E08ED423D8164500E11C8C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		A969212323CC1BCE005ED41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A969212523CC1BCE005ED41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A969212623CC1BCE005ED41B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A9E08ED223D6CD4200E11C8C /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		A9E08ED423D8164500E11C8C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				A969212323CC1BCE005ED41B /* Assets.xcassets */,
 				A969212523CC1BCE005ED41B /* Info.plist */,
 				A969212623CC1BCE005ED41B /* PushNotificationPayload.apns */,
+				A9E08ED223D6CD4200E11C8C /* RowController.swift */,
+				A9E08ED423D8164500E11C8C /* NetworkManager.swift */,
 			);
 			path = "earthquake-monitor WatchKit Extension";
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 			files = (
 				A969212223CC1BCD005ED41B /* NotificationController.swift in Sources */,
 				A969212023CC1BCD005ED41B /* ExtensionDelegate.swift in Sources */,
+				A9E08ED523D8164500E11C8C /* NetworkManager.swift in Sources */,
+				A9E08ED323D6CD4200E11C8C /* RowController.swift in Sources */,
 				A969211E23CC1BCD005ED41B /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
