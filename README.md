@@ -1,3 +1,3 @@
 # earthquake-monitor
 
-![](assets/screenshot.png)
+<img src="assets/screenshot.png" width="40%" ></img>
