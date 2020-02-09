@@ -13,6 +13,6 @@ class RowController: NSObject {
     
     @IBOutlet weak var magnitudeLabel: WKInterfaceLabel!
     @IBOutlet weak var locationLabel: WKInterfaceLabel!
-    @IBOutlet weak var datetimeLabel: WKInterfaceDate!
-
+    @IBOutlet weak var datetimeLabel: WKInterfaceLabel!
+    
 }

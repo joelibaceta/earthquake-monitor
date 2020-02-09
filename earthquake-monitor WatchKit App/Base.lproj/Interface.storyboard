@@ -32,13 +32,13 @@ Monitor</string>
                                             </group>
                                             <group width="0.59999999999999998" height="1" alignment="right" verticalAlignment="center" layout="vertical" id="vPu-rh-6uR">
                                                 <items>
-                                                    <dateLabel width="1" height="0.20000000000000001" alignment="left" verticalAlignment="center" textAlignment="right" id="sQ6-8V-cXo">
-                                                        <fontDescription key="font" type="system" weight="medium" pointSize="9"/>
-                                                        <dateFormatterStyle key="dateStyle" short="YES"/>
-                                                        <dateFormatterStyle key="timeStyle" short="YES"/>
-                                                    </dateLabel>
-                                                    <label width="1" height="0.59999999999999998" heightAdjustment="2" alignment="left" text="18km ESE of Playa Vicente, Mexico" textAlignment="right" numberOfLines="2" id="SOH-tA-CRi">
+                                                    <label width="1" height="0.45000000000000001" heightAdjustment="2" alignment="left" text="18km ESE of Playa Vicente, Mexico" textAlignment="right" numberOfLines="2" id="SOH-tA-CRi">
                                                         <fontDescription key="font" type="system" pointSize="10"/>
+                                                    </label>
+                                                    <label width="1" height="0.40000000000000002" heightAdjustment="2" alignment="left" textAlignment="right" numberOfLines="2" id="aUa-HD-ARl">
+                                                        <string key="text">10/20/2020
+10:00 PM</string>
+                                                        <fontDescription key="font" type="system" pointSize="9"/>
                                                     </label>
                                                 </items>
                                                 <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
@@ -47,7 +47,7 @@ Monitor</string>
                                         <edgeInsets key="margins" left="8" right="12" top="4" bottom="0.0"/>
                                     </group>
                                     <connections>
-                                        <outlet property="datetimeLabel" destination="sQ6-8V-cXo" id="PvD-hj-56l"/>
+                                        <outlet property="datetimeLabel" destination="aUa-HD-ARl" id="7fx-E5-j2g"/>
                                         <outlet property="locationLabel" destination="SOH-tA-CRi" id="NLr-xI-89f"/>
                                         <outlet property="magnitudeLabel" destination="pa5-d9-ocV" id="DUL-Cc-O6C"/>
                                     </connections>

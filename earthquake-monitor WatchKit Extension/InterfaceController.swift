@@ -19,7 +19,6 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         loadTableData()
-        // Configure interface objects here.
     }
     
     override func willActivate() {
@@ -33,7 +32,35 @@ class InterfaceController: WKInterfaceController {
     }
     
     private func loadTableData() {
-        uitable.setNumberOfRows(8, withRowType: "RowController")
+        
+        let client = NetworkManager.init()
+        
+        client.getEarthquakesList(callback: { (eartquakes) -> Void in
+          
+            self.uitable.setNumberOfRows(eartquakes.count, withRowType: "RowController")
+            
+            for (index, eartquake) in eartquakes.enumerated() {
+                 
+                if let rowController = self.uitable.rowController(at: index) as? RowController {
+                    
+                    let magnitude = (eartquake as! NSDictionary).value(forKey: "magnitude")
+                    let color: UIColor = (eartquake as! NSDictionary).value(forKey: "color") as! UIColor
+                    rowController.magnitudeLabel.setText("\(magnitude ?? 0)")
+                    rowController.magnitudeLabel.setTextColor(color)
+                    let location = (eartquake as! NSDictionary).value(forKey: "location")
+                    rowController.locationLabel.setText("\(location ?? "")")
+                    let datetime = (eartquake as! NSDictionary).value(forKey: "datetime")
+                    rowController.datetimeLabel.setText("\(datetime ?? "")")
+                    
+                }
+                
+            }
+            
+        })
+    }
+    
+    private func reloadTable(){
+        
     }
 
 }
